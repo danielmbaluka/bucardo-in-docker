@@ -36,7 +36,7 @@ bucardo add herd $VAR_HERD $MIGRATION_TABLES --verbose
 # onetimecopy=2 is important - this will delete everything in the target first, do a full replication,
 # then switch to replicating the deltas (equivalent to DMS's full-load and cdc option):
 # Also disable strict checking
-bucardo add sync $VAR_SYNC relgroup=$VAR_HERD dbs=$VAR_SRC_DB:source,$VAR_DST_DB:target onetimecopy=0 strict_checking=false
+bucardo add sync $VAR_SYNC relgroup=$VAR_HERD dbs=$VAR_SRC_DB:source,$VAR_DST_DB:target onetimecopy=2 strict_checking=false
 
 # It’s useful to set logging more verbose than default:
 bucardo set log_showlevel=1
