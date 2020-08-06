@@ -1,0 +1,7 @@
+version: '3'
+services:
+  ubuntu:
+    build:
+      context: .
+    environment:
+      - DEBIAN_FRONTEND=noninteractive
